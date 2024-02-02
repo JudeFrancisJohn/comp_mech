@@ -26,7 +26,7 @@ X_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=
 Y_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, 1), dtype=np.bool)
 
 
-print('Resizing training images and masks')
+print('Resizing images and masking together')
 for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids)):   
     path = TRAIN_PATH + id_
     img = imread(path + '/images/' + id_ + '.png')[:,:,:IMG_CHANNELS]  
